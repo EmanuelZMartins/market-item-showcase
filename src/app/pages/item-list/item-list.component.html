@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="listagem">
+        <h2>Lista de Produtos</h2>
+        <div class="lista">
+            <ul>
+                <li *ngFor="let produto of produtos"> 
+                    {{ produto }} - 
+                <button (click)="remove(produto)">Remover</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

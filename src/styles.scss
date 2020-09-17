@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//Imagem de fundo +  Efeito Blur/Desfocado
+.bg-image {
+  background-image: url('assets/images/itemShowcaseBackGround.webp');
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
