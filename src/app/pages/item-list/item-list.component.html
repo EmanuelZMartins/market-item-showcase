@@ -4,7 +4,7 @@
         <div class="lista">
             <ul>
                 <li *ngFor="let produto of produtos"> 
-                    {{ produto }}
+                    {{ produto }} - 
                 <button (click)="remove(produto)">Remover</button>
                 <button (click)="mostrarEditor()">Editar</button>
                 </li>
