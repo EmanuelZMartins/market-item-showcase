@@ -9,6 +9,9 @@ import { Injectable } from '@angular/core';
 export class MarketService {
 
   public produtos:Produto[] = [];
+  public nome: Produto;
+  public preco: Produto;
+
 
   constructor() { }
 
@@ -16,7 +19,8 @@ export class MarketService {
     return this.produtos;
   }
 
-  // Métodos para adicionar um objeto :Produto à lista de Produtos
+  // Métodos para adicionar um objeto :Produto à lista de Produtos 
+  //(2 métodos, consertar depois)
   public adicionarNomeProduto (nomeProduto: Produto) {
     this.produtos.push(nomeProduto);
   }
@@ -38,10 +42,6 @@ export class MarketService {
   // Métodos para alterar o registo da lista de Produtos
   public update(nomeAntigo: Produto, novoNome: Produto) {
     const index = this.produtos.indexOf(nomeAntigo);
-    if (index == null) {
-      console.log('Fail: produto não pode ser alterado');
-    } else {
-      this.produtos.splice(index, 1, novoNome);
-    }
+    this.produtos.splice(index, 1, novoNome);
   }
 }
