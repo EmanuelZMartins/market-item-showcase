@@ -17,17 +17,16 @@ export class MarketService {
   }
 
   // Métodos para adicionar um objeto :Produto à lista de Produtos
-
-  adicionarNomeProduto (nomeProduto: Produto) {
+  public adicionarNomeProduto (nomeProduto: Produto) {
     this.produtos.push(nomeProduto);
   }
 
-  adicionarPrecoProduto(precoProduto:Produto) {
+  public adicionarPrecoProduto(precoProduto:Produto) {
     this.produtos.push(precoProduto);
   }
 
   // Métodos para remover determinado registo da lista de Produtos
-  removerProduto(produto: Produto) {
+  public removerProduto(produto: Produto) {
     const index = this.produtos.indexOf(produto);
     if(index !== null ) {
       this.produtos.splice(index, 1);
@@ -37,5 +36,14 @@ export class MarketService {
   }
 
   // Métodos para alterar o registo da lista de Produtos
+  
 
+  public update(nomeAntigo: Produto, novoNome: Produto) {
+    const index = this.produtos.indexOf(nomeAntigo);
+    if (index == null) {
+      console.log('Fail: produto não pode ser alterado');
+    } else {
+      this.produtos.splice(index, 1, novoNome);
+    }
+  }
 }

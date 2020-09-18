@@ -4,10 +4,16 @@
         <div class="lista">
             <ul>
                 <li *ngFor="let produto of produtos"> 
-                    {{ produto }} - 
+                    {{ produto }}
                 <button (click)="remove(produto)">Remover</button>
+                <button (click)="mostrarEditor()">Editar</button>
                 </li>
             </ul>
+        </div>
+        <div [hidden]="showEditor" class="editor">
+            <input type="text" placeholder="Produto que deseja Alterar"#nomeAntigo autoGrow>
+            <input type="text" placeholder="Novo Produto" #novoNome autoGrow>
+            <button type="submit" (click)="update(nomeAntigo.value, novoNome.value)">Salvar</button>
         </div>
     </div>
 </div>

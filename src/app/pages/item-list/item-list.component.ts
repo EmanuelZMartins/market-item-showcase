@@ -2,7 +2,6 @@ import { Produto } from './../../../models/model/produto';
 import { Component, OnInit } from '@angular/core';
 
 import { MarketService } from './../services/market.service';
-import { ListModule } from './list.module';
 
 @Component({
   selector: 'app-item-list',
@@ -11,10 +10,10 @@ import { ListModule } from './list.module';
 })
 export class ItemListComponent implements OnInit {
 
-  //variavel da função toggle/editar/alterar
-  public mostrarConteudo: boolean = true;
-
   public produtos:Produto[] = [];
+
+  // Variável para a função toggle do editor
+  public showEditor: Boolean = true;
 
   constructor(private service: MarketService) {
    }
@@ -27,5 +26,12 @@ export class ItemListComponent implements OnInit {
     this.service.removerProduto(produto);
   }
 
+  mostrarEditor() {
+   this.showEditor = !this.showEditor;
+  }
+
+  update(nomeAntigo: Produto, novoNome){
+    this.service.update(nomeAntigo, novoNome);
+  }
   
 }
