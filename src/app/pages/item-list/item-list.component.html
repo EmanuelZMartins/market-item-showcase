@@ -11,6 +11,7 @@
             </ul>
         </div>
         <div [hidden]="showEditor" class="editor">
+            <h4>Editor de Registro</h4>
             <input type="text" placeholder="Produto que deseja Alterar"#nomeAntigo autoGrow>
             <input type="text" placeholder="Novo Produto" #novoNome autoGrow>
             <button type="submit" (click)="update(nomeAntigo.value, novoNome.value)">Salvar</button>
