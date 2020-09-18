@@ -36,8 +36,6 @@ export class MarketService {
   }
 
   // Métodos para alterar o registo da lista de Produtos
-  
-
   public update(nomeAntigo: Produto, novoNome: Produto) {
     const index = this.produtos.indexOf(nomeAntigo);
     if (index == null) {
