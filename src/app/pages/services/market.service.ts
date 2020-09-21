@@ -9,9 +9,6 @@ import { Injectable } from '@angular/core';
 export class MarketService {
 
   public produtos:Produto[] = [];
-  public nome: Produto;
-  public preco: Produto;
-
 
   constructor() { }
 
