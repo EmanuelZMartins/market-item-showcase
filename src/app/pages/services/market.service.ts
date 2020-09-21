@@ -1,5 +1,4 @@
 import { Produto } from './../../../models/model/produto';
-import { FormControl, FormGroup } from '@angular/forms';
 import { Injectable } from '@angular/core';
 
 
