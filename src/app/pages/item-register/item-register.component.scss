@@ -41,4 +41,24 @@
         border-radius: 25px;
         transition: 0.25s;
     }
+    span {
+        color: green;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #b0ed6a;
+        width: 10px;
+        padding: 10px;
+        margin: 5px auto;
+        border: 2px solid green;
+    }
+    .msgDone {
+        animation: fadeOut 1s;
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        } 100% {
+            opacity: 0;
+        }
+    }
 }
