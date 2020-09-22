@@ -18,7 +18,7 @@ export class MarketService {
   // Métodos para adicionar um objeto :Produto à lista de Produtos 
   //(2 métodos, consertar depois)
   public adicionarNomeProduto (nomeProduto: Produto) {
-    this.produtos.push(nomeProduto);
+      this.produtos.push(nomeProduto);
   }
 
   public adicionarPrecoProduto(precoProduto:Produto) {
