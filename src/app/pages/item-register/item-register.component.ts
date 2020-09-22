@@ -26,7 +26,7 @@ export class ItemRegisterComponent implements OnInit {
   }
 
   changeAlertPosition() {
-    Swal.fire({position: 'bottom-right', icon: 'success', title: 'Your work has been saved',
+    Swal.fire({position: 'bottom-right', icon: 'success', title: 'Produto: Salvo com Sucesso!!',
       showConfirmButton: false, timer: 850 })
   }
 }
