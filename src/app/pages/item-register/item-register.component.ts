@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { MarketService } from './../services/market.service';
 import { Produto } from './../../../models/model/produto';
-import { temporaryDeclaration } from '@angular/compiler/src/compiler_util/expression_converter';
-import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
-import { Button } from 'protractor';
 
 @Component({
   selector: 'app-item-register',
@@ -14,7 +11,6 @@ import { Button } from 'protractor';
 export class ItemRegisterComponent implements OnInit {
 
   public produtos:Produto[] = [];
-  public msgDone:boolean = true;
 
   constructor(private service: MarketService) { }
 
@@ -25,10 +21,5 @@ export class ItemRegisterComponent implements OnInit {
   public cadastrarProduto(nomeProduto:Produto, precoProduto:Produto) {
     this.service.adicionarNomeProduto(nomeProduto);
     this.service.adicionarPrecoProduto(precoProduto);
-    this.checkIn();
-  }
-  
-  public checkIn() {
-    this.msgDone = !this.msgDone;
   }
 }

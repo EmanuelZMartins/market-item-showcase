@@ -24,7 +24,7 @@ export class MarketService {
   public adicionarPrecoProduto(precoProduto:Produto) {
     this.produtos.push(precoProduto);
   }
-
+  
   // Métodos para remover determinado registo da lista de Produtos
   public removerProduto(produto: Produto) {
     const index = this.produtos.indexOf(produto);
