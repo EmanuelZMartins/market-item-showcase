@@ -23,4 +23,8 @@ export class ItemRegisterComponent implements OnInit {
     this.service.adicionarPrecoProduto(precoProduto);
   }
 
+  public checkIn() {
+    alert('Produto: Salvo com Sucesso!');
+  }
+
 }

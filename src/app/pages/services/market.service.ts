@@ -40,4 +40,5 @@ export class MarketService {
     const index = this.produtos.indexOf(nomeAntigo);
     this.produtos.splice(index, 1, novoNome);
   }
-}
+  
+ }
