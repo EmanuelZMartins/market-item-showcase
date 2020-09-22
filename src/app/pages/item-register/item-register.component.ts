@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Component, OnInit } from '@angular/core';
 
 import { MarketService } from './../services/market.service';
@@ -21,5 +22,11 @@ export class ItemRegisterComponent implements OnInit {
   public cadastrarProduto(nomeProduto:Produto, precoProduto:Produto) {
     this.service.adicionarNomeProduto(nomeProduto);
     this.service.adicionarPrecoProduto(precoProduto);
+    this.changeAlertPosition();
+  }
+
+  changeAlertPosition() {
+    Swal.fire({position: 'bottom-right', icon: 'success', title: 'Your work has been saved',
+      showConfirmButton: false, timer: 850 })
   }
 }
